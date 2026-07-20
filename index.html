@@ -128,6 +128,10 @@
   .follow-card{ background:var(--paper); border:1px solid var(--line); border-radius:20px; padding:40px; text-align:center; max-width:640px; margin:0 auto; }
   .follow-card h3{ font-size:1.5rem; text-transform:lowercase; margin-bottom:14px; }
   .follow-card p{ opacity:0.75; margin-bottom:24px; }
+  .review-list{ display:flex; flex-direction:column; gap:16px; margin-bottom:28px; text-align:left; }
+  .review-quote{ border-left:3px solid var(--matcha); padding-left:16px; }
+  .review-quote p{ margin-bottom:6px; font-style:italic; opacity:0.9; }
+  .review-quote cite{ font-family:'JetBrains Mono',monospace; font-size:0.72rem; font-style:normal; opacity:0.6; }
   .social-row{ display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
 
   .visit{ background:var(--ink); color:var(--cream); }
@@ -201,6 +205,7 @@
         <span class="badge" data-i18n="badge_1">📍 Bessungen, Darmstadt</span>
         <span class="badge" data-i18n="badge_2">🥯 Frische Bagels</span>
         <span class="badge" data-i18n="badge_3">🍵 Matcha-Bar</span>
+        <span class="badge" data-i18n="badge_4">⭐ 5.0 · 30 Bewertungen</span>
       </div>
       <div class="cta-row">
         <a class="btn btn-fill" data-i18n="cta_directions" href="https://www.google.com/maps/dir/?api=1&destination=Nieder-Ramst%C3%A4dter+Str.+5A+64283+Darmstadt" target="_blank" rel="noopener">Route planen →</a>
@@ -271,6 +276,7 @@
       </div>
     </div>
     <p class="bagel-note" data-i18n="bagel_note">Beispielhafter Aufbau, nicht die bestätigte Speisekarte — bitte vor Veröffentlichung durch Earlys' echte Bagel-Auswahl und Preise ersetzen.</p>
+    <p class="bagel-note" data-i18n="bagel_fav">Gäste-Favorit laut Google-Bewertungen: der Pastrami Bagel.</p>
   </div>
 </section>
 
@@ -282,6 +288,7 @@
         <h2 style="text-transform:lowercase; font-size:clamp(1.9rem,4vw,2.6rem); font-weight:800;" data-i18n="matcha_h2">frisch geschlagen, nicht aus der Flasche</h2>
         <p data-i18n="matcha_p1">Matcha steht gleichberechtigt neben den Bagels als zweite Hälfte der Theke — heiß, kalt oder als Latte, frisch geschlagen statt aus einer vorgemischten Flasche.</p>
         <p data-i18n="matcha_p2">Ein Getränk für Fotomomente genauso wie für Kaffee-Puristen — genau darin liegt der Sinn der Kombination mit Bagels: Bessungen bekommt gleich zwei gute Gründe am Tag, vorbeizuschauen.</p>
+        <p data-i18n="matcha_p3">Gästeliebling laut Bewertungen: der Blueberry Matcha.</p>
         <a class="btn btn-line" style="border-color:var(--cream); color:var(--cream);" data-i18n="matcha_cta" href="https://www.instagram.com/cafe.earlys/" target="_blank" rel="noopener">Folgt uns →</a>
       </div>
       <div class="reveal">
@@ -343,10 +350,16 @@
 <section class="section follow">
   <div class="wrap">
     <div class="follow-card reveal">
-      <h3 data-i18n="follow_h3">Bewertungen sammeln sich gerade erst</h3>
-      <p data-i18n="follow_p">Earlys hat gerade erst eröffnet — ehrlich gesagt gibt es noch keine etablierte Bewertungsgrundlage, aus der wir zitieren könnten. Das ist der Moment, sie aufzubauen: die Seite verlinkt direkt dorthin, wo bereits darüber gesprochen wird.</p>
+      <h3 data-i18n="follow_h3">5,0 ★ bei Google — 30 Bewertungen</h3>
+      <p data-i18n="follow_p">Kein Platzhalter mehr — hier sind ein paar echte Stimmen von Gästen, die schon bei Earlys waren.</p>
+      <div class="review-list">
+        <blockquote class="review-quote"><p data-i18n="rev1_q">„Best matcha in Darmstadt 🤩“</p><cite data-i18n="rev1_a">— Syeon Lee, Google-Rezension</cite></blockquote>
+        <blockquote class="review-quote"><p data-i18n="rev2_q">„Sehr hochwertiger Matcha.“</p><cite data-i18n="rev2_a">— U-My, Google-Rezension</cite></blockquote>
+        <blockquote class="review-quote"><p data-i18n="rev3_q">„Ich habe dieses Café über TikTok entdeckt und dort gegessen. Ich hatte einen Pastrami-Bagel und einen Blueberry Matcha – beide waren absolut köstlich! 😍“</p><cite data-i18n="rev3_a">— Milena Gamroth, Google-Rezension</cite></blockquote>
+      </div>
       <div class="social-row">
-        <a class="btn btn-fill" href="https://www.instagram.com/cafe.earlys/" target="_blank" rel="noopener">Instagram →</a>
+        <a class="btn btn-fill" style="background:#3F5A33;" data-i18n="follow_maps" href="https://www.google.com/maps/search/?api=1&query=Cafe+Earlys+Nieder-Ramst%C3%A4dter+Str.+5A+Darmstadt" target="_blank" rel="noopener">Alle Bewertungen auf Google →</a>
+        <a class="btn btn-line" href="https://www.instagram.com/cafe.earlys/" target="_blank" rel="noopener">Instagram →</a>
         <a class="btn btn-line" href="https://www.tiktok.com/@cafe.earlys" target="_blank" rel="noopener">TikTok →</a>
       </div>
     </div>
@@ -360,8 +373,9 @@
       <h2 style="margin-bottom:26px; text-transform:lowercase; font-size:clamp(1.9rem,4vw,2.4rem); font-weight:800;" data-i18n="visit_h2">kommt vorbei in Bessungen</h2>
       <div class="row"><div class="k" data-i18n="v_addr_k">Adresse</div><div class="v">Nieder-Ramstädter Str. 5A<br>64283 Darmstadt</div></div>
       <div class="row"><div class="k" data-i18n="v_area_k">Gegend</div><div class="v" data-i18n="v_area_v">Bessungen — ein kurzer Weg von der TU Darmstadt entfernt</div></div>
-      <div class="row"><div class="k" data-i18n="v_hours_k">Öffnungszeiten</div><div class="v" data-i18n="v_hours_v">Noch nicht öffentlich bestätigt — bitte aktuelle Zeiten hier ergänzen</div></div>
-      <div class="row"><div class="k" data-i18n="v_online_k">Online</div><div class="v"><a href="https://www.instagram.com/cafe.earlys/" target="_blank" rel="noopener">@cafe.earlys</a> <span data-i18n="v_online_v">auf Instagram &amp; TikTok</span></div></div>
+      <div class="row"><div class="k" data-i18n="v_hours_k">Öffnungszeiten</div><div class="v" data-i18n="v_hours_v">Noch nicht öffentlich bestätigt — aktuellen Status siehe Google Maps</div></div>
+      <div class="row"><div class="k" data-i18n="v_service_k">Service</div><div class="v" data-i18n="v_service_v">Vor Ort &amp; zum Mitnehmen</div></div>
+      <div class="row"><div class="k" data-i18n="v_online_k">Online</div><div class="v"><a href="https://www.instagram.com/cafe.earlys/" target="_blank" rel="noopener">@cafe.earlys</a> <span data-i18n="v_online_v">auf Instagram &amp; TikTok</span> · <a href="https://earlys.de" target="_blank" rel="noopener">earlys.de</a></div></div>
       <div class="cta-row" style="margin-top:10px;">
         <a class="btn btn-fill" style="background:#3F5A33;" data-i18n="visit_cta" href="https://www.google.com/maps/dir/?api=1&destination=Nieder-Ramst%C3%A4dter+Str.+5A+64283+Darmstadt" target="_blank" rel="noopener">Route planen →</a>
       </div>
@@ -378,6 +392,7 @@
     <div class="f-links">
       <a href="https://www.instagram.com/cafe.earlys/" target="_blank" rel="noopener">Instagram</a>
       <a href="https://www.tiktok.com/@cafe.earlys" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://earlys.de" target="_blank" rel="noopener">earlys.de</a>
     </div>
   </div>
   <div class="wrap">
@@ -405,6 +420,7 @@
     badge_1:        { de:"📍 Bessungen, Darmstadt", en:"📍 Bessungen, Darmstadt" },
     badge_2:        { de:"🥯 Frische Bagels", en:"🥯 Fresh Bagels" },
     badge_3:        { de:"🍵 Matcha-Bar", en:"🍵 Matcha Bar" },
+    badge_4:        { de:"⭐ 5.0 · 30 Bewertungen", en:"⭐ 5.0 · 30 reviews" },
     cta_directions: { de:"Route planen →", en:"Get Directions →" },
     cta_feed:       { de:"Feed ansehen", en:"See the Feed" },
 
@@ -432,6 +448,7 @@
     tag_1:{de:"Basis",en:"base"}, tag_2:{de:"Schmear",en:"schmear"}, tag_3:{de:"Schicht",en:"layer"}, tag_4:{de:"Finish",en:"finish"},
     bagel_note:     { de:"Beispielhafter Aufbau, nicht die bestätigte Speisekarte — bitte vor Veröffentlichung durch Earlys' echte Bagel-Auswahl und Preise ersetzen.",
                       en:"Illustrative build, not the confirmed menu — swap in Earlys' actual bagel lineup and prices before this goes live." },
+    bagel_fav:      { de:"Gäste-Favorit laut Google-Bewertungen: der Pastrami Bagel.", en:"Guest favourite according to Google reviews: the pastrami bagel." },
 
     matcha_eyebrow: { de:"Die Matcha-Bar", en:"The Matcha Bar" },
     matcha_h2:      { de:"frisch geschlagen, nicht aus der Flasche", en:"whisked to order, not syruped" },
@@ -439,6 +456,7 @@
                       en:"Matcha sits right alongside the bagels as the other half of the counter — hot, iced, or blended into a latte, whisked to order rather than pulled from a pre-mixed bottle." },
     matcha_p2:      { de:"Ein Getränk für Fotomomente genauso wie für Kaffee-Puristen — genau darin liegt der Sinn der Kombination mit Bagels: Bessungen bekommt gleich zwei gute Gründe am Tag, vorbeizuschauen.",
                       en:"It's the kind of drink built for the front-of-camera crowd as much as the coffee purists — the whole point of pairing it with bagels is giving Bessungen a reason to stop in twice a day." },
+    matcha_p3:      { de:"Gästeliebling laut Bewertungen: der Blueberry Matcha.", en:"Guest favourite according to reviews: the blueberry matcha." },
     matcha_cta:     { de:"Folgt uns →", en:"Follow along →" },
 
     specials_eyebrow:{ de:"Aktuell bei Earlys", en:"Right now at Earlys" },
@@ -465,9 +483,17 @@
     gallery_note:   { de:"Die ersten drei Kacheln verlinken zu echten Fotos von Earlys auf Google Maps — die letzte ist noch ein Platzhalter, gerne an einem belebten Morgen selbst fotografieren.",
                       en:"The first three tiles link to real photos of Earlys on Google Maps — the last one is still a placeholder, feel free to shoot it on a busy morning." },
 
-    follow_h3:      { de:"Bewertungen sammeln sich gerade erst", en:"reviews are still rolling in" },
-    follow_p:       { de:"Earlys hat gerade erst eröffnet — ehrlich gesagt gibt es noch keine etablierte Bewertungsgrundlage, aus der wir zitieren könnten. Das ist der Moment, sie aufzubauen: die Seite verlinkt direkt dorthin, wo bereits darüber gesprochen wird.",
-                      en:"Earlys just opened, so there isn't an established review base yet to draw from honestly. This is the moment to build one — the site links straight out to where people are already talking about it." },
+    follow_h3:      { de:"5,0 ★ bei Google — 30 Bewertungen", en:"5.0 ★ on Google — 30 reviews" },
+    follow_p:       { de:"Kein Platzhalter mehr — hier sind ein paar echte Stimmen von Gästen, die schon bei Earlys waren.",
+                      en:"No more placeholder — here are a few real voices from guests who've already been to Earlys." },
+    rev1_q:         { de:"„Best matcha in Darmstadt 🤩“", en:"\"Best matcha in Darmstadt 🤩\"" },
+    rev1_a:         { de:"— Syeon Lee, Google-Rezension", en:"— Syeon Lee, Google review" },
+    rev2_q:         { de:"„Sehr hochwertiger Matcha.“", en:"\"Very high quality matcha\"" },
+    rev2_a:         { de:"— U-My, Google-Rezension", en:"— U-My, Google review" },
+    rev3_q:         { de:"„Ich habe dieses Café über TikTok entdeckt und dort gegessen. Ich hatte einen Pastrami-Bagel und einen Blueberry Matcha – beide waren absolut köstlich! 😍“",
+                      en:"\"I discovered this café through TikTok and ate there today. I had a pastrami bagel and a blueberry matcha – both were absolutely delicious! 😍\"" },
+    rev3_a:         { de:"— Milena Gamroth, Google-Rezension", en:"— Milena Gamroth, Google review" },
+    follow_maps:    { de:"Alle Bewertungen auf Google →", en:"See all reviews on Google →" },
 
     visit_eyebrow:  { de:"So findet ihr uns", en:"Find Us" },
     visit_h2:       { de:"kommt vorbei in Bessungen", en:"come say hi in Bessungen" },
@@ -475,7 +501,9 @@
     v_area_k:{de:"Gegend",en:"Area"},
     v_area_v:{de:"Bessungen — ein kurzer Weg von der TU Darmstadt entfernt",en:"Bessungen — a short walk from TU Darmstadt"},
     v_hours_k:{de:"Öffnungszeiten",en:"Hours"},
-    v_hours_v:{de:"Noch nicht öffentlich bestätigt — bitte aktuelle Zeiten hier ergänzen",en:"Not yet confirmed publicly — add current hours here before publishing"},
+    v_hours_v:{de:"Noch nicht öffentlich bestätigt — aktuellen Status siehe Google Maps",en:"Not yet confirmed publicly — see Google Maps for current status"},
+    v_service_k:{de:"Service",en:"Service"},
+    v_service_v:{de:"Vor Ort & zum Mitnehmen",en:"Dine-in & takeaway"},
     v_online_k:{de:"Online",en:"Online"},
     v_online_v:{de:"auf Instagram & TikTok",en:"on Instagram & TikTok"},
     visit_cta:      { de:"Route planen →", en:"Get Directions →" },
